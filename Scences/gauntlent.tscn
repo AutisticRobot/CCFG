@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45a0q7a2mnoi"]
+
+[ext_resource type="Texture2D" uid="uid://dn1q2dxvsktsu" path="res://baseData/generalAssets/ccfgGauntlent.png" id="1_0ox5d"]
+[ext_resource type="Texture2D" uid="uid://csg2hhdkex5pe" path="res://baseData/critter/man/ccfgMan.png" id="2_ojpmb"]
+
+[node name="Gauntlent" type="Node2D"]
+
+[node name="CcfgGauntlent" type="Sprite2D" parent="."]
+position = Vector2(944, 591)
+scale = Vector2(2, 2)
+texture = ExtResource("1_0ox5d")
+
+[node name="Critter2" type="Sprite2D" parent="."]
+position = Vector2(692, 616)
+texture = ExtResource("2_ojpmb")
+
+[node name="Critter3" type="Sprite2D" parent="."]
+position = Vector2(834, 366)
+texture = ExtResource("2_ojpmb")
+
+[node name="Critter4" type="Sprite2D" parent="."]
+position = Vector2(976, 301)
+texture = ExtResource("2_ojpmb")
+
+[node name="Critter5" type="Sprite2D" parent="."]
+position = Vector2(1120, 297)
+texture = ExtResource("2_ojpmb")
+
+[node name="Critter6" type="Sprite2D" parent="."]
+position = Vector2(1273, 362)
+texture = ExtResource("2_ojpmb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1390.0
+offset_top = 818.0
+offset_right = 1836.0
+offset_bottom = 1001.0
+theme_override_font_sizes/font_size = 128
+text = "FIGHT!!"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://chcasmbmknp70"]
+
+[ext_resource type="Texture2D" uid="uid://cu6yrlhjw4x5t" path="res://baseData/generalAssets/ccfgLogo.png" id="1_b2gwu"]
+[ext_resource type="Texture2D" uid="uid://dn1q2dxvsktsu" path="res://baseData/generalAssets/ccfgGauntlent.png" id="2_cnmnl"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CcfgLogo" type="Sprite2D" parent="."]
+position = Vector2(964, 256)
+scale = Vector2(3.6, 1)
+texture = ExtResource("1_b2gwu")
+
+[node name="CcfgGauntlent" type="Sprite2D" parent="."]
+position = Vector2(387, 836)
+texture = ExtResource("2_cnmnl")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1513.0
+offset_top = 826.0
+offset_right = 1703.0
+offset_bottom = 922.0
+theme_override_font_sizes/font_size = 64
+text = "Notes"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 797.0
+offset_top = 497.0
+offset_right = 1072.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 32
+text = "Made By:
+Tyler M. Kormann"
+horizontal_alignment = 1
