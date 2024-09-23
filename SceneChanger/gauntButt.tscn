@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://co0w4aj51i076"]
+
+[ext_resource type="Script" path="res://SceneChanger/GauntButt.cs" id="1_p0ym5"]
+[ext_resource type="Texture2D" uid="uid://d0sog0dqwrvld" path="res://icon.svg" id="2_3nwlf"]
+
+[node name="GuantButt" type="Button"]
+modulate = Color(1, 1, 1, 0.423529)
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("2_3nwlf")
+script = ExtResource("1_p0ym5")
+
+[connection signal="pressed" from="." to="." method="OnPress"]

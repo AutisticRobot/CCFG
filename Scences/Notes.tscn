@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr5v8fxwh4q4h"]
+
+[ext_resource type="Script" path="res://SceneChanger/SceneChanger.cs" id="1_nk42c"]
+[ext_resource type="Texture2D" uid="uid://csg2hhdkex5pe" path="res://baseData/critter/man/ccfgMan.png" id="2_4u7ki"]
+
+[node name="Notes" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 51.0
+offset_right = 243.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 64
+text = "Back"
+script = ExtResource("1_nk42c")
+targetScenePath = "res://Scences/mainMenu.tscn"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 360.0
+offset_top = 197.0
+offset_right = 557.0
+offset_bottom = 242.0
+theme_override_font_sizes/font_size = 32
+text = "I made this \"game\" during a single weekend to see if i could, which i failed : [
+
+Well... not entirely, as this is the most focoused I have managed to be ever!
+And as such, while it may not look like much (much of the work is in backend
+ infrastructure) it still marks the culmination of 2 years of struggle
+against un-medicated ADHD, and finialy having something to show
+that i have been making progress, and that thing will only get better! : ]"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 747.0
+offset_right = 1438.0
+offset_bottom = 926.0
+theme_override_font_sizes/font_size = 64
+text = "Thank you for checking this out
+and I hope you have a great day!"
+
+[node name="CcfgMan" type="Sprite2D" parent="."]
+position = Vector2(1741, 1014)
+texture = ExtResource("2_4u7ki")
+
+[node name="Label" type="Label" parent="CcfgMan"]
+offset_left = -69.0
+offset_top = -134.0
+offset_right = 68.0
+offset_bottom = -111.0
+text = "Man, AKA: A dude"
+
+[node name="Label" type="Label" parent="CcfgMan/Label"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 26.0
+offset_right = 116.0
+offset_bottom = 49.0
+rotation = 1.5247
+text = "+>"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 619.0
+offset_top = 1036.0
+offset_right = 1312.0
+offset_bottom = 1059.0
+text = "You can add a mod, but it will only display the name, as i failed to finish the critter creator"
+
+[connection signal="pressed" from="Button" to="Button" method="OnPress"]

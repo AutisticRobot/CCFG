@@ -1,39 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://b45a0q7a2mnoi"]
+[gd_scene load_steps=5 format=3 uid="uid://b45a0q7a2mnoi"]
 
 [ext_resource type="Texture2D" uid="uid://dn1q2dxvsktsu" path="res://baseData/generalAssets/ccfgGauntlent.png" id="1_0ox5d"]
-[ext_resource type="Texture2D" uid="uid://csg2hhdkex5pe" path="res://baseData/critter/man/ccfgMan.png" id="2_ojpmb"]
+[ext_resource type="Script" path="res://MajorScripts/gauntletMenu.cs" id="1_w6svr"]
+[ext_resource type="PackedScene" uid="uid://co0w4aj51i076" path="res://SceneChanger/gauntButt.tscn" id="3_80oro"]
+[ext_resource type="Script" path="res://SceneChanger/SceneChanger.cs" id="4_nrrhv"]
 
-[node name="Gauntlent" type="Node2D"]
+[node name="Gauntlent" type="Node2D" node_paths=PackedStringArray("cirt1", "cirt2", "cirt3", "cirt4", "cirt5")]
+script = ExtResource("1_w6svr")
+cirt1 = NodePath("GuantButt")
+cirt2 = NodePath("GuantButt2")
+cirt3 = NodePath("GuantButt3")
+cirt4 = NodePath("GuantButt4")
+cirt5 = NodePath("GuantButt5")
 
 [node name="CcfgGauntlent" type="Sprite2D" parent="."]
 position = Vector2(944, 591)
 scale = Vector2(2, 2)
 texture = ExtResource("1_0ox5d")
 
-[node name="Critter2" type="Sprite2D" parent="."]
-position = Vector2(692, 616)
-texture = ExtResource("2_ojpmb")
-
-[node name="Critter3" type="Sprite2D" parent="."]
-position = Vector2(834, 366)
-texture = ExtResource("2_ojpmb")
-
-[node name="Critter4" type="Sprite2D" parent="."]
-position = Vector2(976, 301)
-texture = ExtResource("2_ojpmb")
-
-[node name="Critter5" type="Sprite2D" parent="."]
-position = Vector2(1120, 297)
-texture = ExtResource("2_ojpmb")
-
-[node name="Critter6" type="Sprite2D" parent="."]
-position = Vector2(1273, 362)
-texture = ExtResource("2_ojpmb")
-
-[node name="Button" type="Button" parent="."]
+[node name="ToFight" type="Button" parent="."]
 offset_left = 1390.0
 offset_top = 818.0
 offset_right = 1836.0
 offset_bottom = 1001.0
 theme_override_font_sizes/font_size = 128
 text = "FIGHT!!"
+script = ExtResource("4_nrrhv")
+targetScenePath = "res://Scences/Arena.tscn"
+
+[node name="GuantButt" parent="." instance=ExtResource("3_80oro")]
+offset_left = 616.0
+offset_top = 530.0
+offset_right = 752.0
+offset_bottom = 666.0
+
+[node name="GuantButt2" parent="." instance=ExtResource("3_80oro")]
+offset_left = 755.0
+offset_top = 284.0
+offset_right = 891.0
+offset_bottom = 420.0
+
+[node name="GuantButt3" parent="." instance=ExtResource("3_80oro")]
+offset_left = 899.0
+offset_top = 235.0
+offset_right = 1035.0
+offset_bottom = 371.0
+
+[node name="GuantButt4" parent="." instance=ExtResource("3_80oro")]
+offset_left = 1056.0
+offset_top = 222.0
+offset_right = 1192.0
+offset_bottom = 358.0
+
+[node name="GuantButt5" parent="." instance=ExtResource("3_80oro")]
+offset_left = 1204.0
+offset_top = 288.0
+offset_right = 1340.0
+offset_bottom = 424.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 51.0
+offset_right = 243.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 64
+text = "Back"
+script = ExtResource("4_nrrhv")
+targetScenePath = "res://Scences/mainMenu.tscn"
+
+[connection signal="pressed" from="ToFight" to="ToFight" method="OnPress"]
+[connection signal="pressed" from="Button2" to="Button2" method="OnPress"]

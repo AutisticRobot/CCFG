@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="CCFG"
-run/main_scene="res://Scences/gauntlent.tscn"
+run/main_scene="res://Scences/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalGauntlet="*res://MajorScripts/globalGauntlet.cs"
+Bestiary="*res://ModLoader/bestiary.cs"
 
 [display]
 

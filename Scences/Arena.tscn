@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cipnegx5v0tmf"]
+
+[ext_resource type="Texture2D" uid="uid://dn1q2dxvsktsu" path="res://baseData/generalAssets/ccfgGauntlent.png" id="1_y8xdt"]
+[ext_resource type="Script" path="res://SceneChanger/SceneChanger.cs" id="2_hsjmi"]
+[ext_resource type="Texture2D" uid="uid://2rfxtx0iq4ph" path="res://baseData/generalAssets/ccfgArena.png" id="3_k7qi0"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="GauntlentMenu" type="Button" parent="Node2D"]
+offset_left = 555.0
+offset_top = 37.0
+offset_right = 1075.0
+offset_bottom = 557.0
+rotation = 2.0996
+icon = ExtResource("1_y8xdt")
+flat = true
+script = ExtResource("2_hsjmi")
+targetScenePath = "res://Scences/gauntlent.tscn"
+
+[node name="CcfgArena" type="Sprite2D" parent="."]
+position = Vector2(960, 609)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k7qi0")
+
+[connection signal="pressed" from="Node2D/GauntlentMenu" to="Node2D/GauntlentMenu" method="OnPress"]

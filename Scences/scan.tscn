@@ -5,6 +5,7 @@
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("text", "sprite")]
 script = ExtResource("1_lx0ai")
+targetScenePath = "res://Scences/gauntlent.tscn"
 text = NodePath("Label")
 sprite = NodePath("Sprite2D")
 
@@ -20,3 +21,22 @@ text = "BLANK"
 position = Vector2(932, 335)
 scale = Vector2(3, 3)
 texture = ExtResource("2_3dy4b")
+
+[node name="exit" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 3.0
+offset_right = 1441.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 64
+text = "Save Critter & return to gauntlet"
+
+[node name="new" type="Button" parent="."]
+offset_left = 788.0
+offset_top = 862.0
+offset_right = 1154.0
+offset_bottom = 958.0
+theme_override_font_sizes/font_size = 64
+text = "New Critter"
+
+[connection signal="pressed" from="exit" to="." method="OnPress"]
+[connection signal="pressed" from="new" to="." method="newCrit"]
